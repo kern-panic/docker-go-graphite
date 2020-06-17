@@ -9,6 +9,7 @@ docker run -d \
  -p 2003:2003/udp \
  -p 2003-2004:2003-2004 \
  -p 8081:8081 \
+ -p 8125:8125/udp \
  nordling/go-graphite
 ```
 
@@ -16,6 +17,7 @@ docker run -d \
 
 * [Go-carbon](https://github.com/lomik/go-carbon) - Golang implementation of Graphite/Carbon server
 * [Carbonapi](https://github.com/go-graphite/carbonapi) - Golang implementation of Graphite-web
+* [Statsd](https://github.com/statsd/statsd) - Statsd network metrics collector
 
 ### Mapped Ports
 
@@ -40,3 +42,11 @@ DOCKER ASSIGNED   | /var/log                   | log files
 For external Grafana datasource must use CarbonAPI port - 8081/tcp
 
 For example - [grafana-carbonapi](https://github.com/go-graphite/docker-go-graphite/blob/master/conf/etc/grafana/provisioning/datasources/carbonapi.yaml)
+
+### Statsd
+
+Thanks for:
+ 
+* [Graphite Project](https://github.com/graphite-project/docker-graphite-statsd)
+* [Go-Graphite Project](https://github.com/go-graphite)
+* [Statsd Project](https://github.com/statsd/statsd)
