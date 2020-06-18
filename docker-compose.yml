@@ -1,0 +1,18 @@
+version: "2.4"
+services:
+  go-graphite:
+    image: nordling/go-graphite
+    container_name: go-graphite
+    hostname: go-graphite
+    restart: always
+    ports:
+      - "2003:2003/udp"
+      - "2003-2004:2003-2004"
+      - "8081:8081"
+      - "8125:8125/udp"
+    volumes:
+      - ./conf/etc/go-carbon:/etc/go-carbon:ro
+      - ./conf/etc/carbonapi:/etc/carbonapi:ro
+      - ./conf/etc/logrotate.d:/etc/logrotate.d:ro
+      - ./data/graphite:/var/lib/graphite
+      - ./data/log:/var/log

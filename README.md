@@ -2,6 +2,8 @@
 
 ## Quick Start
 
+*Docker*
+
 ```sh
 docker run -d \
  --name go-graphite \
@@ -11,6 +13,16 @@ docker run -d \
  -p 8081:8081 \
  -p 8125:8125/udp \
  nordling/go-graphite
+```
+
+*Docker-Compose*
+
+```sh
+git clone https://github.com/kern-panic/docker-go-graphite.git
+
+cd docker-go-graphite/
+
+docker-compose up -d
 ```
 
 ### Includes the following components
@@ -26,6 +38,7 @@ Host | Container | Service
 2003 |      2003 | [carbon receiver - plaintext](http://graphite.readthedocs.io/en/latest/feeding-carbon.html#the-plaintext-protocol)
 2004 |      2004 | [carbon receiver - pickle](http://graphite.readthedocs.io/en/latest/feeding-carbon.html#the-pickle-protocol)
 8081 |      8081 | [carbonapi](https://github.com/go-graphite/carbonapi)
+8125 |      8125 | [statsd](https://github.com/statsd/statsd)
 
 ### Mounted Volumes
 
