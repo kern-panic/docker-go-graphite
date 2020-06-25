@@ -10,9 +10,11 @@ services:
       - "2003-2004:2003-2004"
       - "8081:8081"
       - "8125:8125/udp"
+      - "8126:8126"
     volumes:
       - ./conf/etc/go-carbon:/etc/go-carbon:ro
       - ./conf/etc/carbonapi:/etc/carbonapi:ro
       - ./conf/etc/logrotate.d:/etc/logrotate.d:ro
+      - ./conf/opt/statsd/config:/opt/statsd/config:ro
       - ./data/graphite:/var/lib/graphite
       - ./data/log:/var/log

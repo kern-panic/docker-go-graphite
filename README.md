@@ -12,6 +12,7 @@ docker run -d \
  -p 2003-2004:2003-2004 \
  -p 8081:8081 \
  -p 8125:8125/udp \
+ -p 8126:8126 \
  nordling/go-graphite
 ```
 
@@ -39,6 +40,7 @@ Host | Container | Service
 2004 |      2004 | [carbon receiver - pickle](http://graphite.readthedocs.io/en/latest/feeding-carbon.html#the-pickle-protocol)
 8081 |      8081 | [carbonapi](https://github.com/go-graphite/carbonapi)
 8125 |      8125 | [statsd](https://github.com/statsd/statsd)
+8126 |      8126 | [statsd](https://github.com/statsd/statsd)
 
 ### Mounted Volumes
 
