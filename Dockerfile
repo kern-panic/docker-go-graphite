@@ -1,10 +1,10 @@
 # ---------------------- BUILD IMAGE ---------------------------------------
 FROM golang:1-alpine as builder
 
-ENV GOCARBON_VERSION='0.14.0'
-ENV CARBONAPI_VERSION='0.13.0'
+ENV GOCARBON_VERSION='0.15.6'
+ENV CARBONAPI_VERSION='0.14.2'
 ENV GOPATH='/opt/go'
-ENV STATSD_VERSION='0.8.6'
+ENV STATSD_VERSION='0.9.0'
 
 RUN apk update  --no-cache \
   && apk upgrade --no-cache \
