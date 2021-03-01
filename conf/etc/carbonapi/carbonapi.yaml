@@ -135,13 +135,13 @@ expireDelaySec: 10
 logger:
     - logger: ""
       file: "stderr"
-      level: "debug"
+      level: "warn"
       encoding: "console"
       encodingTime: "iso8601"
       encodingDuration: "seconds"
     - logger: ""
       file: "carbonapi.log"
-      level: "info"
+      level: "warn"
       encoding: "json"
 
 tagdb:
